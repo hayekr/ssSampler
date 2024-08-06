@@ -1,1 +1,1 @@
-To install on Mac, download and run [SSSamplerInstaller.dmg](https://github.com/hayekn/ssSampler/raw/main/SSSamplerInstaller.dmg?download=), or run 
+To install on Mac, download and run [SSSamplerInstaller.dmg](https://github.com/hayekn/ssSampler/raw/main/SSSamplerInstaller.dmg?download=), or run ```curl -o SSSamplerInstaller.dmg https://github.com/hayekn/ssSampler/blob/3b10a2f3e5b4360c141311766080c01924a6b455/SSSamplerInstaller.dmg``` 
