@@ -8,10 +8,16 @@
   ==============================================================================
 */
 
+#include <string>
 
 #include "InstCode.h"
 #include "SamplerSoundLayer.h"
 #define MAX_VOICES 16
+
+
+std::string GenerateWAVFileName(string& note, int octave, string& dynamic) {
+    return note + std::to_string(octave) + " " + dynamic + ".wav";
+}
 
 
 void InstCode::setup() {
@@ -37,15 +43,15 @@ void InstCode::setup() {
     DBG(appLocation);
     
     
-    juce::ScopedPointer<juce::AudioFormatReader> As0Forte = audioFormatManager.createReaderFor(juce::File(appLocation+"A#0 Forte.wav"));
+    juce::ScopedPointer<juce::AudioFormatReader> As0Forte      = audioFormatManager.createReaderFor(juce::File(appLocation+"A#0 Forte.wav"));
     juce::ScopedPointer<juce::AudioFormatReader> As0MezzoForte = audioFormatManager.createReaderFor(juce::File(appLocation+"A#0 Mezzo Forte.wav"));
     juce::ScopedPointer<juce::AudioFormatReader> As0MezzoPiano = audioFormatManager.createReaderFor(juce::File(appLocation+"A#0 Mezzo Piano.wav"));
-    juce::ScopedPointer<juce::AudioFormatReader> As0Piano = audioFormatManager.createReaderFor(juce::File(appLocation+"A#0 Piano.wav"));
-    juce::ScopedPointer<juce::AudioFormatReader> As1Forte = audioFormatManager.createReaderFor(juce::File(appLocation+"A#1 Forte.wav"));
+    juce::ScopedPointer<juce::AudioFormatReader> As0Piano      = audioFormatManager.createReaderFor(juce::File(appLocation+"A#0 Piano.wav"));
+    juce::ScopedPointer<juce::AudioFormatReader> As1Forte      = audioFormatManager.createReaderFor(juce::File(appLocation+"A#1 Forte.wav"));
     juce::ScopedPointer<juce::AudioFormatReader> As1MezzoForte = audioFormatManager.createReaderFor(juce::File(appLocation+"A#1 Mezzo Forte.wav"));
     juce::ScopedPointer<juce::AudioFormatReader> As1MezzoPiano = audioFormatManager.createReaderFor(juce::File(appLocation+"A#1 Mezzo Piano.wav"));
-    juce::ScopedPointer<juce::AudioFormatReader> As1Piano = audioFormatManager.createReaderFor(juce::File(appLocation+"A#1 Piano.wav"));
-    juce::ScopedPointer<juce::AudioFormatReader> As2Forte = audioFormatManager.createReaderFor(juce::File(appLocation+"A#2 Forte.wav"));
+    juce::ScopedPointer<juce::AudioFormatReader> As1Piano      = audioFormatManager.createReaderFor(juce::File(appLocation+"A#1 Piano.wav"));
+    juce::ScopedPointer<juce::AudioFormatReader> As2Forte      = audioFormatManager.createReaderFor(juce::File(appLocation+"A#2 Forte.wav"));
     juce::ScopedPointer<juce::AudioFormatReader> As2MezzoForte = audioFormatManager.createReaderFor(juce::File(appLocation+"A#2 Mezzo Forte.wav"));
     juce::ScopedPointer<juce::AudioFormatReader> As2MezzoPiano = audioFormatManager.createReaderFor(juce::File(appLocation+"A#2 Mezzo Piano.wav"));
     juce::ScopedPointer<juce::AudioFormatReader> As2Piano = audioFormatManager.createReaderFor(juce::File(appLocation+"A#2 Piano.wav"));
